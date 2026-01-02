@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fachbereiche · Klinikum Bielefeld Mitte</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="topbar">
+      <a class="brand" href="index.html"><div class="logo"></div><div><strong>Klinikum Bielefeld Mitte</strong><span>Fachbereiche</span></div></a>
+      <button class="menuBtn" id="menuBtn">☰</button>
+      <nav id="navLinks">
+        <ul>
+          <li><a href="index.html" data-close="1">Start</a></li>
+          <li><a href="fachbereiche.html" data-close="1">Fachbereiche</a></li>
+          <li><a href="notaufnahme.html" data-close="1">Notaufnahme</a></li>
+          <li><a href="bewerbung.html" data-close="1">Karriere</a></li>
+          <li><a href="portal-login.html" data-close="1">Mitarbeiterportal</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <section class="hero">
+      <h1>Fachbereiche & Spezialisierungen</h1>
+      <p class="lead">Auszug unserer Abteilungen – intern abgestimmte Zusammenarbeit zwischen Diagnostik, Station & OP.</p>
+
+      <div class="grid2" style="margin-top:12px">
+        <div class="dept"><div class="icon">🫀</div><div><h4>Innere Medizin / Kardiologie</h4><small>Monitoring, Labor, Akutversorgung, stationär.</small></div></div>
+        <div class="dept"><div class="icon">🧠</div><div><h4>Neurologie</h4><small>Akutdiagnostik, neurologische Überwachung.</small></div></div>
+        <div class="dept"><div class="icon">🦴</div><div><h4>Chirurgie / Unfallchirurgie</h4><small>Wundversorgung, OP, Nachsorge.</small></div></div>
+        <div class="dept"><div class="icon">👶</div><div><h4>Pädiatrie</h4><small>Kinder & Jugendliche: Notfälle & Station.</small></div></div>
+        <div class="dept"><div class="icon">🫁</div><div><h4>Anästhesie & Intensiv</h4><small>Intensivüberwachung, Schmerztherapie.</small></div></div>
+        <div class="dept"><div class="icon">🧪</div><div><h4>Radiologie / Diagnostik</h4><small>Schnelle Bildgebung & Befundwege.</small></div></div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footerRow container">
+        <div><b style="color:var(--text)">Klinikum Bielefeld Mitte</b><br><span>© <span id="year"></span> – In-World</span></div>
+        <div><span>Disclaimer: fiktive Zwecke.</span></div>
+      </div>
+    </footer>
+  </div>
+</main>
+
+<div class="toast" id="toast"><strong id="toastTitle"></strong><p id="toastText"></p></div>
+<script src="assets/app.js"></script>
+</body>
+</html>

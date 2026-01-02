@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lolking110.github.io/Klinikum-Bielefeld-Mitte/sitemap.xml

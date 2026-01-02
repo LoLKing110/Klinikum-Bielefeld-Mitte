@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Klinikum Bielefeld Mitte</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="topbar">
+      <a class="brand" href="index.html">
+        <div class="logo"></div>
+        <div>
+          <strong>Klinikum Bielefeld Mitte</strong>
+          <span>Medizin. Verantwortung. Teamgeist.</span>
+        </div>
+      </a>
+
+      <button class="menuBtn" id="menuBtn">☰</button>
+
+      <nav id="navLinks">
+        <ul>
+          <li><a href="index.html" data-close="1">Start</a></li>
+          <li><a href="fachbereiche.html" data-close="1">Fachbereiche</a></li>
+          <li><a href="notaufnahme.html" data-close="1">Notaufnahme</a></li>
+          <li><a href="bewerbung.html" data-close="1">Karriere</a></li>
+          <li><a href="portal-login.html" data-close="1">Mitarbeiterportal</a></li>
+          <li><a class="cta" href="notaufnahme.html" data-close="1">24/7 Aufnahme</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <section class="hero">
+      <div class="pills">
+        <span class="pill">🏥 Zentrale Versorgung</span>
+        <span class="pill">🩺 24/7 Notaufnahme</span>
+        <span class="pill">🚑 Rettungsdienst-Anbindung</span>
+      </div>
+
+      <h1>Versorgung auf höchstem Niveau – mitten in Bielefeld.</h1>
+      <p class="lead">
+        Schnelle Akutversorgung, starke Fachabteilungen und klare Abläufe – von der Aufnahme bis zur Entlassung.
+      </p>
+
+      <div class="grid3" style="margin-top:12px">
+        <div class="card">
+          <h3>Akutmedizin & Struktur</h3>
+          <p>Standardisierte Prozesse: Anmeldung → Diagnostik → Behandlung → Entlassung/Station.</p>
+        </div>
+        <div class="card">
+          <h3>Teamwork</h3>
+          <p>Pflege, Ärztlicher Dienst, Rettungsdienst und Verwaltung: kurze Wege, klare Kommunikation.</p>
+        </div>
+        <div class="card">
+          <h3>Fortbildung</h3>
+          <p>Schulungen, Mentoring, Aufstiegsmöglichkeiten – wer zuverlässig arbeitet, kommt weiter.</p>
+        </div>
+      </div>
+
+      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px">
+        <a class="cta" href="bewerbung.html">Jetzt bewerben</a>
+        <a class="cta" style="background:rgba(255,255,255,.03); color:var(--text); border:1px solid rgba(255,255,255,.12); box-shadow:none" href="fachbereiche.html">Fachbereiche</a>
+        <a class="cta" style="background:rgba(255,255,255,.03); color:var(--text); border:1px solid rgba(255,255,255,.12); box-shadow:none" href="portal-login.html">Mitarbeiterportal</a>
+      </div>
+    </section>
+
+    <section style="margin-top:12px">
+      <div class="grid2">
+        <div class="alert danger">
+          <strong>Notaufnahme</strong>
+          <p>Behandlung nach Dringlichkeit (Triage). Lebensbedrohliches hat Priorität.</p>
+        </div>
+        <div class="alert">
+          <strong>In-World Zentrale</strong>
+          <p><b>+49 521 0000-100</b> · Notaufnahme: <b>+49 521 0000-110</b></p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footerRow container">
+        <div>
+          <b style="color:var(--text)">Klinikum Bielefeld Mitte</b><br>
+          <span>© <span id="year"></span> – Interne Webpräsenz (In-World)</span>
+        </div>
+        <div>
+          <span>Impressum · Datenschutz · Hausordnung</span><br>
+          <span style="opacity:.85">Disclaimer: Diese Seite ist für fiktive Zwecke erstellt.</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+</main>
+
+<div class="toast" id="toast"><strong id="toastTitle"></strong><p id="toastText"></p></div>
+<script src="assets/app.js"></script>
+</body>
+</html>

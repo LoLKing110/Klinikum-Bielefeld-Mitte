@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Karriere · Klinikum Bielefeld Mitte</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="topbar">
+      <a class="brand" href="index.html"><div class="logo"></div><div><strong>Klinikum Bielefeld Mitte</strong><span>Karriere</span></div></a>
+      <button class="menuBtn" id="menuBtn">☰</button>
+      <nav id="navLinks">
+        <ul>
+          <li><a href="index.html" data-close="1">Start</a></li>
+          <li><a href="fachbereiche.html" data-close="1">Fachbereiche</a></li>
+          <li><a href="notaufnahme.html" data-close="1">Notaufnahme</a></li>
+          <li><a href="bewerbung.html" data-close="1">Karriere</a></li>
+          <li><a href="portal-login.html" data-close="1">Mitarbeiterportal</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <section class="hero">
+      <h1>Karriere & Bewerbung</h1>
+      <p class="lead">Kurze Bewerbung reicht: Wunschbereich, Verfügbarkeit, Erfahrung. (Kontakt ist In-World.)</p>
+
+      <div class="grid2" style="margin-top:12px">
+        <div class="card">
+          <h3>Offene Positionen (Auszug)</h3>
+          <p>• Pflegefachkraft (Station/NA)<br>• Assistenzarzt (NA)<br>• Aufnahme/Verwaltung<br>• Rettungsdienst-Koordination</p>
+          <p class="small" style="margin-top:10px">Hinweis: Schichtdienst nach Dienstplan.</p>
+        </div>
+
+        <div class="card">
+          <h3>Bewerbungsformular</h3>
+          <form id="applyForm">
+            <div class="row2">
+              <input required name="name" placeholder="Name / Dienstnummer" />
+              <select required name="department">
+                <option value="" disabled selected>Wunschbereich</option>
+                <option>Notaufnahme</option>
+                <option>Station (Innere)</option>
+                <option>Station (Chirurgie)</option>
+                <option>Pädiatrie</option>
+                <option>Radiologie</option>
+                <option>Verwaltung / Aufnahme</option>
+                <option>Sonstiges</option>
+              </select>
+            </div>
+            <div class="row2">
+              <input required type="email" name="email" placeholder="E-Mail (In-World ok)" />
+              <input name="phone" placeholder="Telefon (optional)" />
+            </div>
+            <textarea required name="message" placeholder="Kurze Nachricht / Motivation"></textarea>
+            <button class="btn" type="submit">Absenden</button>
+            <div class="small">Hinweis: Dieses Formular sendet keine echten Daten (statisch / In-World).</div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footerRow container">
+        <div><b style="color:var(--text)">Klinikum Bielefeld Mitte</b><br><span>© <span id="year"></span> – In-World</span></div>
+        <div><span>Disclaimer: fiktive Zwecke.</span></div>
+      </div>
+    </footer>
+  </div>
+</main>
+
+<div class="toast" id="toast"><strong id="toastTitle"></strong><p id="toastText"></p></div>
+<script src="assets/app.js"></script>
+</body>
+</html>

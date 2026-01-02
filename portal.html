@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mitarbeiterportal · Klinikum Bielefeld Mitte</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="portal">
+<header>
+  <div class="container">
+    <div class="topbar">
+      <a class="brand" href="index.html"><div class="logo"></div><div><strong>Klinikum Bielefeld Mitte</strong><span>Portal</span></div></a>
+      <button class="menuBtn" id="menuBtn">☰</button>
+      <nav id="navLinks">
+        <ul>
+          <li><a href="index.html" data-close="1">Start</a></li>
+          <li><a href="notaufnahme.html" data-close="1">Notaufnahme</a></li>
+          <li><a href="fachbereiche.html" data-close="1">Fachbereiche</a></li>
+          <li><a href="#" class="cta" id="logoutBtn" data-close="1">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <section class="hero">
+      <div class="pills">
+        <span class="pill">🔒 Intern</span>
+        <span class="pill">📋 Dienstinfo</span>
+        <span class="pill">🧾 Leitlinien</span>
+      </div>
+
+      <h1>Mitarbeiterportal</h1>
+      <p class="lead">Angemeldet als: <b id="whoami">-</b></p>
+
+      <div class="grid3" style="margin-top:12px">
+        <div class="card">
+          <h3>Schicht- & Dienstinfo</h3>
+          <p>• Übergabezeiten<br>• Stationsbelegung (In-World)<br>• Kurzinfos zum Tagesbetrieb</p>
+        </div>
+        <div class="card">
+          <h3>Leitlinien (Auszug)</h3>
+          <p>• Dokumentation vollständig<br>• Kommunikation kurz & klar<br>• Triage-Entscheidung respektieren</p>
+        </div>
+        <div class="card">
+          <h3>Interne Kanäle</h3>
+          <p>• #klinik-einsatz<br>• #schichtwechsel<br>• #fortbildung</p>
+        </div>
+      </div>
+
+      <div class="grid2" style="margin-top:12px">
+        <div class="alert">
+          <strong>Hausordnung</strong>
+          <p>Diskretion, Professionalität, Teamkommunikation. Konflikte → über Leitung klären.</p>
+        </div>
+        <div class="alert warn">
+          <strong>Datenschutz</strong>
+          <p>Keine echten Daten. Nur fiktive Inhalte.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footerRow container">
+        <div><b style="color:var(--text)">Klinikum Bielefeld Mitte</b><br><span>© <span id="year"></span> – In-World</span></div>
+        <div><span>Disclaimer: fiktive Zwecke.</span></div>
+      </div>
+    </footer>
+  </div>
+</main>
+
+<div class="toast" id="toast"><strong id="toastTitle"></strong><p id="toastText"></p></div>
+<script src="assets/app.js"></script>
+</body>
+</html>

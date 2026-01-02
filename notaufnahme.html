@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Notaufnahme · Klinikum Bielefeld Mitte</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="topbar">
+      <a class="brand" href="index.html"><div class="logo"></div><div><strong>Klinikum Bielefeld Mitte</strong><span>Notaufnahme</span></div></a>
+      <button class="menuBtn" id="menuBtn">☰</button>
+      <nav id="navLinks">
+        <ul>
+          <li><a href="index.html" data-close="1">Start</a></li>
+          <li><a href="fachbereiche.html" data-close="1">Fachbereiche</a></li>
+          <li><a href="bewerbung.html" data-close="1">Karriere</a></li>
+          <li><a href="portal-login.html" data-close="1">Mitarbeiterportal</a></li>
+          <li><a class="cta" href="notaufnahme.html" data-close="1">24/7 Aufnahme</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <section class="hero">
+      <div class="pills">
+        <span class="pill">🚑 24/7</span>
+        <span class="pill">📋 Triage</span>
+        <span class="pill">🧪 Diagnostik</span>
+      </div>
+      <h1>Notaufnahme – schneller Ablauf, klare Prioritäten.</h1>
+      <p class="lead">Bitte halte die Kommunikation kurz & sachlich: Symptome, Dauer, Vorerkrankungen, Medikamente.</p>
+
+      <div class="grid2" style="margin-top:12px">
+        <div class="alert danger">
+          <strong>Akut / kritisch</strong>
+          <p>Bewusstlosigkeit, Atemnot, starke Blutung, Brustschmerz, schwere Verletzungen → sofortige Priorität.</p>
+        </div>
+        <div class="alert warn">
+          <strong>Wartezeit</strong>
+          <p>Reihenfolge nach Dringlichkeit. Bitte respektiere Personalentscheidungen.</p>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:12px">
+        <h3>Ablauf</h3>
+        <p>1) Anmeldung · 2) Ersteinschätzung · 3) Diagnostik · 4) Behandlung · 5) Station/Entlassung · 6) Doku</p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footerRow container">
+        <div><b style="color:var(--text)">Klinikum Bielefeld Mitte</b><br><span>© <span id="year"></span> – In-World</span></div>
+        <div><span>Disclaimer: fiktive Zwecke.</span></div>
+      </div>
+    </footer>
+  </div>
+</main>
+
+<div class="toast" id="toast"><strong id="toastTitle"></strong><p id="toastText"></p></div>
+<script src="assets/app.js"></script>
+</body>
+</html>
