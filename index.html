@@ -18,15 +18,17 @@
       </div>
     </a>
 
-    <button class="menuBtn" id="menuBtn">☰</button>
-
-    <nav id="navLinks" class="nav">
-      <a href="index.html" data-close="1">Start</a>
-      <a href="fachbereiche.html" data-close="1">Fachbereiche</a>
-      <a href="notaufnahme.html" data-close="1">Notaufnahme</a>
-      <a href="bewerbung.html" data-close="1">Karriere</a>
-      <a href="portal-login.html" data-close="1" class="btnPrimary">Portal</a>
+    <nav class="nav" aria-label="Navigation">
+      <a href="index.html">Start</a>
+      <a href="fachbereiche.html">Fachbereiche</a>
+      <a href="notaufnahme.html">Notaufnahme</a>
+      <a href="bewerbung.html">Karriere</a>
+      <a class="btnPrimary" href="portal-login.html">Portal</a>
     </nav>
+
+    <button class="iconBtn" id="drawerOpen" aria-label="Menü öffnen">
+      <span class="hamburger" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
   </div>
 </header>
 
@@ -60,7 +62,6 @@
       </div>
 
       <div class="heroRight" aria-hidden="true">
-        <!-- Inline SVG Illustration (keine externen Bilder nötig) -->
         <svg viewBox="0 0 520 420" class="heroSvg" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
@@ -127,15 +128,44 @@
         <b>Klinikum Bielefeld Mitte</b><br>
         © <span id="year"></span> · Betreiber (In-World): Günther · fiktive Zwecke
       </div>
-      <div>
-        Impressum · Datenschutz · Hausordnung
-      </div>
+      <div>Impressum · Datenschutz · Hausordnung</div>
     </footer>
 
   </div>
 </main>
 
+<!-- Drawer (gleich auf allen Seiten) -->
+<div class="drawerOverlay" id="drawerOverlay" aria-hidden="true"></div>
+<aside class="drawer" aria-label="Menü">
+  <div class="drawerHeader">
+    <div class="title">Klinikum Bielefeld Mitte</div>
+    <button class="iconBtn" id="drawerClose" aria-label="Menü schließen">✕</button>
+  </div>
+
+  <div class="drawerContent">
+    <a class="drawerLink" href="index.html"><div><b>Start</b><br><span>Übersicht</span></div>→</a>
+    <a class="drawerLink" href="fachbereiche.html"><div><b>Fachbereiche</b><br><span>Abteilungen</span></div>→</a>
+    <a class="drawerLink" href="notaufnahme.html"><div><b>Notaufnahme</b><br><span>24/7 Aufnahme</span></div>→</a>
+    <a class="drawerLink" href="bewerbung.html"><div><b>Karriere</b><br><span>Bewerbung</span></div>→</a>
+    <a class="drawerLink" href="portal-login.html"><div><b>Mitarbeiterportal</b><br><span>Interner Zugang</span></div>→</a>
+
+    <div class="toggleRow">
+      <div>
+        <b>Darkmode</b><br>
+        <span style="color:var(--muted); font-size:12px;">Ein/Aus</span>
+      </div>
+      <div class="switch" id="themeSwitch" role="switch" tabindex="0" aria-checked="false" aria-label="Darkmode umschalten"></div>
+    </div>
+  </div>
+
+  <div class="drawerActions">
+    <a class="btnPrimary" href="notaufnahme.html">Sofort zur Aufnahme</a>
+    <a class="btnGhost" href="bewerbung.html">Jetzt bewerben</a>
+  </div>
+</aside>
+
 <script src="assets/app.js"></script>
 </body>
 </html>
+
 

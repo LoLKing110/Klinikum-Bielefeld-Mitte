@@ -3,66 +3,100 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mitarbeiterportal Login · Klinikum Bielefeld Mitte</title>
+  <title>Portal Login · Klinikum Bielefeld Mitte</title>
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<header>
-  <div class="container">
-    <div class="topbar">
-      <a class="brand" href="index.html"><div class="logo"></div><div><strong>Klinikum Bielefeld Mitte</strong><span>Mitarbeiterportal</span></div></a>
-      <button class="menuBtn" id="menuBtn">☰</button>
-      <nav id="navLinks">
-        <ul>
-          <li><a href="index.html" data-close="1">Start</a></li>
-          <li><a href="bewerbung.html" data-close="1">Karriere</a></li>
-          <li><a href="notaufnahme.html" data-close="1">Notaufnahme</a></li>
-        </ul>
-      </nav>
-    </div>
+
+<header class="siteHeader">
+  <div class="container headerRow">
+    <a class="brand" href="index.html">
+      <div class="brandMark">✚</div>
+      <div>
+        <div class="brandName">Klinikum Bielefeld Mitte</div>
+        <div class="brandSub">Mitarbeiterportal</div>
+      </div>
+    </a>
+
+    <nav class="nav" aria-label="Navigation">
+      <a href="index.html">Start</a>
+      <a href="fachbereiche.html">Fachbereiche</a>
+      <a href="notaufnahme.html">Notaufnahme</a>
+      <a href="bewerbung.html">Karriere</a>
+    </nav>
+
+    <button class="iconBtn" id="drawerOpen" aria-label="Menü öffnen">
+      <span class="hamburger" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
   </div>
 </header>
 
 <main>
   <div class="container">
-    <section class="hero">
-      <h1>Portal-Login</h1>
+
+    <section class="card">
+      <h2>Portal-Login</h2>
       <p class="lead">Interner Zugang (optisch / In-World). Kein echtes Sicherheitssystem.</p>
+    </section>
 
-      <div class="grid2" style="margin-top:12px">
-        <div class="card">
-          <h3>Login</h3>
-          <form id="portalLoginForm">
-            <input id="user" required placeholder="Benutzer (z.B. leitung)" />
-            <input id="pass" type="password" required placeholder="Passwort" />
-            <button class="btn" type="submit">Einloggen</button>
-            <div class="small" style="margin-top:10px">
-              Demo-Zugänge: <b>leitung / klinikum123</b> · <b>pflege / station42</b> · <b>admin / admin</b>
-            </div>
-          </form>
-        </div>
-
-        <div class="card">
-          <h3>Hinweis</h3>
-          <p>Dieses Portal dient der Darstellung interner Abläufe, Dienstinfos und Leitlinien – fiktiv.</p>
-          <div class="alert warn" style="margin-top:12px">
-            <strong>Wichtig</strong>
-            <p>Keine echten Patientendaten eintragen. Nur In-World Inhalte.</p>
+    <section class="grid2">
+      <div class="card">
+        <div class="cardIcon">🔐</div>
+        <h3>Login</h3>
+        <form id="portalLoginForm">
+          <input id="user" required placeholder="Benutzer (z.B. leitung)" />
+          <input id="pass" type="password" required placeholder="Passwort" />
+          <button class="btnPrimary" type="submit">Einloggen</button>
+          <div class="small" style="margin-top:10px">
+            Demo: <b>leitung / klinikum123</b> · <b>pflege / station42</b> · <b>admin / admin</b>
           </div>
-        </div>
+        </form>
+      </div>
+
+      <div class="card">
+        <div class="cardIcon">⚠️</div>
+        <h3>Hinweis</h3>
+        <p class="small">Keine echten Daten. Nur In-World Inhalte.</p>
       </div>
     </section>
 
-    <footer>
-      <div class="footerRow container">
-        <div><b style="color:var(--text)">Klinikum Bielefeld Mitte</b><br><span>© <span id="year"></span> – In-World</span></div>
-        <div><span>Disclaimer: fiktive Zwecke.</span></div>
-      </div>
+    <footer class="footer">
+      <div><b>Klinikum Bielefeld Mitte</b><br>© <span id="year"></span> · Betreiber (In-World): Günther</div>
+      <div>Impressum · Datenschutz · Hausordnung</div>
     </footer>
+
   </div>
 </main>
 
-<div class="toast" id="toast"><strong id="toastTitle"></strong><p id="toastText"></p></div>
+<div class="drawerOverlay" id="drawerOverlay" aria-hidden="true"></div>
+<aside class="drawer" aria-label="Menü">
+  <div class="drawerHeader">
+    <div class="title">Klinikum Bielefeld Mitte</div>
+    <button class="iconBtn" id="drawerClose" aria-label="Menü schließen">✕</button>
+  </div>
+
+  <div class="drawerContent">
+    <a class="drawerLink" href="index.html"><div><b>Start</b><br><span>Übersicht</span></div>→</a>
+    <a class="drawerLink" href="fachbereiche.html"><div><b>Fachbereiche</b><br><span>Abteilungen</span></div>→</a>
+    <a class="drawerLink" href="notaufnahme.html"><div><b>Notaufnahme</b><br><span>24/7 Aufnahme</span></div>→</a>
+    <a class="drawerLink" href="bewerbung.html"><div><b>Karriere</b><br><span>Bewerbung</span></div>→</a>
+    <a class="drawerLink" href="portal-login.html"><div><b>Mitarbeiterportal</b><br><span>Interner Zugang</span></div>→</a>
+
+    <div class="toggleRow">
+      <div>
+        <b>Darkmode</b><br>
+        <span style="color:var(--muted); font-size:12px;">Ein/Aus</span>
+      </div>
+      <div class="switch" id="themeSwitch" role="switch" tabindex="0" aria-checked="false" aria-label="Darkmode umschalten"></div>
+    </div>
+  </div>
+
+  <div class="drawerActions">
+    <a class="btnPrimary" href="notaufnahme.html">Sofort zur Aufnahme</a>
+    <a class="btnGhost" href="bewerbung.html">Jetzt bewerben</a>
+  </div>
+</aside>
+
 <script src="assets/app.js"></script>
 </body>
 </html>

@@ -7,77 +7,70 @@
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<header>
-  <div class="container">
-    <div class="topbar">
-      <a class="brand" href="index.html">
-        <div class="logo"></div>
-        <div>
-          <strong>Klinikum Bielefeld Mitte</strong>
-          <span>Interne Webpräsenz (In-World)</span>
-        </div>
-      </a>
-      <nav id="navLinks">
-        <ul>
-          <li><a href="index.html">Start</a></li>
-          <li><a href="fachbereiche.html">Fachbereiche</a></li>
-          <li><a href="notaufnahme.html">Notaufnahme</a></li>
-          <li><a href="bewerbung.html">Karriere</a></li>
-          <li><a class="cta" href="portal-login.html">Portal</a></li>
-        </ul>
-      </nav>
-    </div>
+
+<header class="siteHeader">
+  <div class="container headerRow">
+    <a class="brand" href="index.html">
+      <div class="brandMark">✚</div>
+      <div>
+        <div class="brandName">Klinikum Bielefeld Mitte</div>
+        <div class="brandSub">Seite nicht gefunden</div>
+      </div>
+    </a>
+
+    <button class="iconBtn" id="drawerOpen" aria-label="Menü öffnen">
+      <span class="hamburger" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
   </div>
 </header>
 
 <main>
   <div class="container">
-    <section class="hero">
-      <div class="pills">
-        <span class="pill">🚫 404</span>
-        <span class="pill">📄 Seite nicht gefunden</span>
-        <span class="pill">🏥 Klinikum Bielefeld Mitte</span>
-      </div>
-
-      <h1>Diese Seite existiert nicht (mehr).</h1>
-      <p class="lead">
-        Entweder ist der Link falsch, oder die Seite wurde intern verschoben.
-        Nutze die Navigation oder spring direkt zurück zur Startseite.
-      </p>
-
-      <div class="grid2" style="margin-top:12px">
-        <a class="card" href="index.html">
-          <h3>Zur Startseite</h3>
-          <p>Zur Übersicht und allen Bereichen.</p>
-        </a>
-        <a class="card" href="notaufnahme.html">
-          <h3>Notaufnahme</h3>
-          <p>24/7 Aufnahme · Ablauf & Hinweise.</p>
-        </a>
-      </div>
-
-      <div class="grid2" style="margin-top:12px">
-        <a class="card" href="bewerbung.html">
-          <h3>Karriere</h3>
-          <p>Bewerbung & offene Positionen.</p>
-        </a>
-        <a class="card" href="portal-login.html">
-          <h3>Mitarbeiterportal</h3>
-          <p>Interner Zugang (In-World).</p>
-        </a>
+    <section class="card">
+      <h2>404 – Diese Seite existiert nicht.</h2>
+      <p class="lead">Nutze das Menü oder geh zurück zur Startseite.</p>
+      <div class="heroActions">
+        <a class="btnPrimary" href="index.html">Zur Startseite</a>
+        <a class="btnGhost" href="notaufnahme.html">Notaufnahme</a>
       </div>
     </section>
 
-    <footer>
-      <div class="footerRow container">
-        <div><b style="color:var(--text)">Klinikum Bielefeld Mitte</b><br><span>© <span id="year"></span> – In-World</span></div>
-        <div><span>Disclaimer: fiktive Zwecke.</span></div>
-      </div>
+    <footer class="footer">
+      <div><b>Klinikum Bielefeld Mitte</b><br>© <span id="year"></span> · Betreiber (In-World): Günther</div>
+      <div>Impressum · Datenschutz · Hausordnung</div>
     </footer>
   </div>
 </main>
 
-<div class="toast" id="toast"><strong id="toastTitle"></strong><p id="toastText"></p></div>
+<div class="drawerOverlay" id="drawerOverlay" aria-hidden="true"></div>
+<aside class="drawer" aria-label="Menü">
+  <div class="drawerHeader">
+    <div class="title">Klinikum Bielefeld Mitte</div>
+    <button class="iconBtn" id="drawerClose" aria-label="Menü schließen">✕</button>
+  </div>
+
+  <div class="drawerContent">
+    <a class="drawerLink" href="index.html"><div><b>Start</b><br><span>Übersicht</span></div>→</a>
+    <a class="drawerLink" href="fachbereiche.html"><div><b>Fachbereiche</b><br><span>Abteilungen</span></div>→</a>
+    <a class="drawerLink" href="notaufnahme.html"><div><b>Notaufnahme</b><br><span>24/7 Aufnahme</span></div>→</a>
+    <a class="drawerLink" href="bewerbung.html"><div><b>Karriere</b><br><span>Bewerbung</span></div>→</a>
+    <a class="drawerLink" href="portal-login.html"><div><b>Mitarbeiterportal</b><br><span>Interner Zugang</span></div>→</a>
+
+    <div class="toggleRow">
+      <div>
+        <b>Darkmode</b><br>
+        <span style="color:var(--muted); font-size:12px;">Ein/Aus</span>
+      </div>
+      <div class="switch" id="themeSwitch" role="switch" tabindex="0" aria-checked="false" aria-label="Darkmode umschalten"></div>
+    </div>
+  </div>
+
+  <div class="drawerActions">
+    <a class="btnPrimary" href="notaufnahme.html">Sofort zur Aufnahme</a>
+    <a class="btnGhost" href="bewerbung.html">Jetzt bewerben</a>
+  </div>
+</aside>
+
 <script src="assets/app.js"></script>
 </body>
 </html>

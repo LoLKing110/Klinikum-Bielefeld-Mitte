@@ -7,62 +7,94 @@
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<header>
-  <div class="container">
-    <div class="topbar">
-      <a class="brand" href="index.html"><div class="logo"></div><div><strong>Klinikum Bielefeld Mitte</strong><span>Notaufnahme</span></div></a>
-      <button class="menuBtn" id="menuBtn">☰</button>
-      <nav id="navLinks">
-        <ul>
-          <li><a href="index.html" data-close="1">Start</a></li>
-          <li><a href="fachbereiche.html" data-close="1">Fachbereiche</a></li>
-          <li><a href="bewerbung.html" data-close="1">Karriere</a></li>
-          <li><a href="portal-login.html" data-close="1">Mitarbeiterportal</a></li>
-          <li><a class="cta" href="notaufnahme.html" data-close="1">24/7 Aufnahme</a></li>
-        </ul>
-      </nav>
-    </div>
+
+<header class="siteHeader">
+  <div class="container headerRow">
+    <a class="brand" href="index.html">
+      <div class="brandMark">✚</div>
+      <div>
+        <div class="brandName">Klinikum Bielefeld Mitte</div>
+        <div class="brandSub">Notaufnahme 24/7</div>
+      </div>
+    </a>
+
+    <nav class="nav" aria-label="Navigation">
+      <a href="index.html">Start</a>
+      <a href="fachbereiche.html">Fachbereiche</a>
+      <a href="notaufnahme.html">Notaufnahme</a>
+      <a href="bewerbung.html">Karriere</a>
+      <a class="btnPrimary" href="portal-login.html">Portal</a>
+    </nav>
+
+    <button class="iconBtn" id="drawerOpen" aria-label="Menü öffnen">
+      <span class="hamburger" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
   </div>
 </header>
 
 <main>
   <div class="container">
-    <section class="hero">
-      <div class="pills">
-        <span class="pill">🚑 24/7</span>
-        <span class="pill">📋 Triage</span>
-        <span class="pill">🧪 Diagnostik</span>
-      </div>
-      <h1>Notaufnahme – schneller Ablauf, klare Prioritäten.</h1>
-      <p class="lead">Bitte halte die Kommunikation kurz & sachlich: Symptome, Dauer, Vorerkrankungen, Medikamente.</p>
 
-      <div class="grid2" style="margin-top:12px">
-        <div class="alert danger">
-          <strong>Akut / kritisch</strong>
-          <p>Bewusstlosigkeit, Atemnot, starke Blutung, Brustschmerz, schwere Verletzungen → sofortige Priorität.</p>
-        </div>
-        <div class="alert warn">
-          <strong>Wartezeit</strong>
-          <p>Reihenfolge nach Dringlichkeit. Bitte respektiere Personalentscheidungen.</p>
-        </div>
-      </div>
+    <section class="card">
+      <h2>Notaufnahme – Ablauf & Prioritäten</h2>
+      <p class="lead">Behandlung nach Dringlichkeit (Triage). Lebensbedrohliches hat immer Vorrang.</p>
+    </section>
 
-      <div class="card" style="margin-top:12px">
-        <h3>Ablauf</h3>
-        <p>1) Anmeldung · 2) Ersteinschätzung · 3) Diagnostik · 4) Behandlung · 5) Station/Entlassung · 6) Doku</p>
+    <section class="grid2">
+      <div class="card">
+        <div class="cardIcon">🚨</div>
+        <h3>Akut / kritisch</h3>
+        <p>Atemnot, starke Blutung, Brustschmerz, Bewusstlosigkeit, schwere Verletzungen → sofort.</p>
+      </div>
+      <div class="card">
+        <div class="cardIcon">⏳</div>
+        <h3>Wartezeiten</h3>
+        <p>Reihenfolge nach Dringlichkeit. Bitte respektiere Entscheidungen des Personals.</p>
       </div>
     </section>
 
-    <footer>
-      <div class="footerRow container">
-        <div><b style="color:var(--text)">Klinikum Bielefeld Mitte</b><br><span>© <span id="year"></span> – In-World</span></div>
-        <div><span>Disclaimer: fiktive Zwecke.</span></div>
-      </div>
+    <section class="card" style="margin-top:14px">
+      <h3>Ablauf</h3>
+      <p class="small">1) Anmeldung · 2) Ersteinschätzung · 3) Diagnostik · 4) Behandlung · 5) Station/Entlassung · 6) Dokumentation</p>
+    </section>
+
+    <footer class="footer">
+      <div><b>Klinikum Bielefeld Mitte</b><br>© <span id="year"></span> · Betreiber (In-World): Günther</div>
+      <div>Impressum · Datenschutz · Hausordnung</div>
     </footer>
+
   </div>
 </main>
 
-<div class="toast" id="toast"><strong id="toastTitle"></strong><p id="toastText"></p></div>
+<div class="drawerOverlay" id="drawerOverlay" aria-hidden="true"></div>
+<aside class="drawer" aria-label="Menü">
+  <div class="drawerHeader">
+    <div class="title">Klinikum Bielefeld Mitte</div>
+    <button class="iconBtn" id="drawerClose" aria-label="Menü schließen">✕</button>
+  </div>
+
+  <div class="drawerContent">
+    <a class="drawerLink" href="index.html"><div><b>Start</b><br><span>Übersicht</span></div>→</a>
+    <a class="drawerLink" href="fachbereiche.html"><div><b>Fachbereiche</b><br><span>Abteilungen</span></div>→</a>
+    <a class="drawerLink" href="notaufnahme.html"><div><b>Notaufnahme</b><br><span>24/7 Aufnahme</span></div>→</a>
+    <a class="drawerLink" href="bewerbung.html"><div><b>Karriere</b><br><span>Bewerbung</span></div>→</a>
+    <a class="drawerLink" href="portal-login.html"><div><b>Mitarbeiterportal</b><br><span>Interner Zugang</span></div>→</a>
+
+    <div class="toggleRow">
+      <div>
+        <b>Darkmode</b><br>
+        <span style="color:var(--muted); font-size:12px;">Ein/Aus</span>
+      </div>
+      <div class="switch" id="themeSwitch" role="switch" tabindex="0" aria-checked="false" aria-label="Darkmode umschalten"></div>
+    </div>
+  </div>
+
+  <div class="drawerActions">
+    <a class="btnPrimary" href="notaufnahme.html">Sofort zur Aufnahme</a>
+    <a class="btnGhost" href="bewerbung.html">Jetzt bewerben</a>
+  </div>
+</aside>
+
 <script src="assets/app.js"></script>
 </body>
 </html>

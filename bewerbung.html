@@ -7,75 +7,120 @@
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<header>
-  <div class="container">
-    <div class="topbar">
-      <a class="brand" href="index.html"><div class="logo"></div><div><strong>Klinikum Bielefeld Mitte</strong><span>Karriere</span></div></a>
-      <button class="menuBtn" id="menuBtn">☰</button>
-      <nav id="navLinks">
-        <ul>
-          <li><a href="index.html" data-close="1">Start</a></li>
-          <li><a href="fachbereiche.html" data-close="1">Fachbereiche</a></li>
-          <li><a href="notaufnahme.html" data-close="1">Notaufnahme</a></li>
-          <li><a href="bewerbung.html" data-close="1">Karriere</a></li>
-          <li><a href="portal-login.html" data-close="1">Mitarbeiterportal</a></li>
-        </ul>
-      </nav>
-    </div>
+
+<header class="siteHeader">
+  <div class="container headerRow">
+    <a class="brand" href="index.html">
+      <div class="brandMark">✚</div>
+      <div>
+        <div class="brandName">Klinikum Bielefeld Mitte</div>
+        <div class="brandSub">Karriere</div>
+      </div>
+    </a>
+
+    <nav class="nav" aria-label="Navigation">
+      <a href="index.html">Start</a>
+      <a href="fachbereiche.html">Fachbereiche</a>
+      <a href="notaufnahme.html">Notaufnahme</a>
+      <a href="bewerbung.html">Karriere</a>
+      <a class="btnPrimary" href="portal-login.html">Portal</a>
+    </nav>
+
+    <button class="iconBtn" id="drawerOpen" aria-label="Menü öffnen">
+      <span class="hamburger" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
   </div>
 </header>
 
 <main>
   <div class="container">
-    <section class="hero">
-      <h1>Karriere & Bewerbung</h1>
-      <p class="lead">Kurze Bewerbung reicht: Wunschbereich, Verfügbarkeit, Erfahrung. (Kontakt ist In-World.)</p>
 
-      <div class="grid2" style="margin-top:12px">
-        <div class="card">
-          <h3>Offene Positionen (Auszug)</h3>
-          <p>• Pflegefachkraft (Station/NA)<br>• Assistenzarzt (NA)<br>• Aufnahme/Verwaltung<br>• Rettungsdienst-Koordination</p>
-          <p class="small" style="margin-top:10px">Hinweis: Schichtdienst nach Dienstplan.</p>
-        </div>
+    <section class="card">
+      <h2>Karriere & Bewerbung</h2>
+      <p class="lead">Kurzbewerbung reicht: Wunschbereich + Verfügbarkeit + kurze Nachricht. (Statisch / In-World.)</p>
+    </section>
 
-        <div class="card">
-          <h3>Bewerbungsformular</h3>
-          <form id="applyForm">
-            <div class="row2">
-              <input required name="name" placeholder="Name / Dienstnummer" />
-              <select required name="department">
-                <option value="" disabled selected>Wunschbereich</option>
-                <option>Notaufnahme</option>
-                <option>Station (Innere)</option>
-                <option>Station (Chirurgie)</option>
-                <option>Pädiatrie</option>
-                <option>Radiologie</option>
-                <option>Verwaltung / Aufnahme</option>
-                <option>Sonstiges</option>
-              </select>
-            </div>
-            <div class="row2">
-              <input required type="email" name="email" placeholder="E-Mail (In-World ok)" />
-              <input name="phone" placeholder="Telefon (optional)" />
-            </div>
-            <textarea required name="message" placeholder="Kurze Nachricht / Motivation"></textarea>
-            <button class="btn" type="submit">Absenden</button>
-            <div class="small">Hinweis: Dieses Formular sendet keine echten Daten (statisch / In-World).</div>
-          </form>
-        </div>
+    <section class="grid2">
+      <div class="card">
+        <div class="cardIcon">📌</div>
+        <h3>Offene Positionen (Auszug)</h3>
+        <p class="small">
+          • Pflegefachkraft (Station/NA)<br>
+          • Assistenzarzt (NA)<br>
+          • Aufnahme/Verwaltung<br>
+          • Rettungsdienst-Koordination
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="cardIcon">📝</div>
+        <h3>Bewerbungsformular</h3>
+
+        <form id="applyForm">
+          <div class="row2">
+            <input required name="name" placeholder="Name / Dienstnummer" />
+            <select required name="department">
+              <option value="" disabled selected>Wunschbereich</option>
+              <option>Notaufnahme</option>
+              <option>Station (Innere)</option>
+              <option>Station (Chirurgie)</option>
+              <option>Pädiatrie</option>
+              <option>Radiologie</option>
+              <option>Verwaltung / Aufnahme</option>
+              <option>Sonstiges</option>
+            </select>
+          </div>
+
+          <div class="row2">
+            <input required type="email" name="email" placeholder="E-Mail (In-World ok)" />
+            <input name="phone" placeholder="Telefon (optional)" />
+          </div>
+
+          <textarea required name="message" placeholder="Kurze Nachricht / Motivation"></textarea>
+          <button class="btnPrimary" type="submit">Absenden</button>
+          <div class="small">Hinweis: Dieses Formular sendet keine echten Daten (statisch / In-World).</div>
+        </form>
       </div>
     </section>
 
-    <footer>
-      <div class="footerRow container">
-        <div><b style="color:var(--text)">Klinikum Bielefeld Mitte</b><br><span>© <span id="year"></span> – In-World</span></div>
-        <div><span>Disclaimer: fiktive Zwecke.</span></div>
-      </div>
+    <footer class="footer">
+      <div><b>Klinikum Bielefeld Mitte</b><br>© <span id="year"></span> · Betreiber (In-World): Günther</div>
+      <div>Impressum · Datenschutz · Hausordnung</div>
     </footer>
+
   </div>
 </main>
 
-<div class="toast" id="toast"><strong id="toastTitle"></strong><p id="toastText"></p></div>
+<div class="drawerOverlay" id="drawerOverlay" aria-hidden="true"></div>
+<aside class="drawer" aria-label="Menü">
+  <div class="drawerHeader">
+    <div class="title">Klinikum Bielefeld Mitte</div>
+    <button class="iconBtn" id="drawerClose" aria-label="Menü schließen">✕</button>
+  </div>
+
+  <div class="drawerContent">
+    <a class="drawerLink" href="index.html"><div><b>Start</b><br><span>Übersicht</span></div>→</a>
+    <a class="drawerLink" href="fachbereiche.html"><div><b>Fachbereiche</b><br><span>Abteilungen</span></div>→</a>
+    <a class="drawerLink" href="notaufnahme.html"><div><b>Notaufnahme</b><br><span>24/7 Aufnahme</span></div>→</a>
+    <a class="drawerLink" href="bewerbung.html"><div><b>Karriere</b><br><span>Bewerbung</span></div>→</a>
+    <a class="drawerLink" href="portal-login.html"><div><b>Mitarbeiterportal</b><br><span>Interner Zugang</span></div>→</a>
+
+    <div class="toggleRow">
+      <div>
+        <b>Darkmode</b><br>
+        <span style="color:var(--muted); font-size:12px;">Ein/Aus</span>
+      </div>
+      <div class="switch" id="themeSwitch" role="switch" tabindex="0" aria-checked="false" aria-label="Darkmode umschalten"></div>
+    </div>
+  </div>
+
+  <div class="drawerActions">
+    <a class="btnPrimary" href="notaufnahme.html">Sofort zur Aufnahme</a>
+    <a class="btnGhost" href="bewerbung.html">Jetzt bewerben</a>
+  </div>
+</aside>
+
 <script src="assets/app.js"></script>
 </body>
 </html>
+
