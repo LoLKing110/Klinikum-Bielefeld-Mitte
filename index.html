@@ -7,98 +7,135 @@
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<header>
-  <div class="container">
-    <div class="topbar">
-      <a class="brand" href="index.html">
-        <div class="logo"></div>
-        <div>
-          <strong>Klinikum Bielefeld Mitte</strong>
-          <span>Medizin. Verantwortung. Teamgeist.</span>
-        </div>
-      </a>
 
-      <button class="menuBtn" id="menuBtn">☰</button>
+<header class="siteHeader">
+  <div class="container headerRow">
+    <a class="brand" href="index.html">
+      <div class="brandMark">✚</div>
+      <div>
+        <div class="brandName">Klinikum Bielefeld Mitte</div>
+        <div class="brandSub">Notaufnahme · Diagnostik · Station</div>
+      </div>
+    </a>
 
-      <nav id="navLinks">
-        <ul>
-          <li><a href="index.html" data-close="1">Start</a></li>
-          <li><a href="fachbereiche.html" data-close="1">Fachbereiche</a></li>
-          <li><a href="notaufnahme.html" data-close="1">Notaufnahme</a></li>
-          <li><a href="bewerbung.html" data-close="1">Karriere</a></li>
-          <li><a href="portal-login.html" data-close="1">Mitarbeiterportal</a></li>
-          <li><a class="cta" href="notaufnahme.html" data-close="1">24/7 Aufnahme</a></li>
-        </ul>
-      </nav>
-    </div>
+    <button class="menuBtn" id="menuBtn">☰</button>
+
+    <nav id="navLinks" class="nav">
+      <a href="index.html" data-close="1">Start</a>
+      <a href="fachbereiche.html" data-close="1">Fachbereiche</a>
+      <a href="notaufnahme.html" data-close="1">Notaufnahme</a>
+      <a href="bewerbung.html" data-close="1">Karriere</a>
+      <a href="portal-login.html" data-close="1" class="btnPrimary">Portal</a>
+    </nav>
   </div>
 </header>
 
 <main>
   <div class="container">
+
     <section class="hero">
-      <div class="pills">
-        <span class="pill">🏥 Zentrale Versorgung</span>
-        <span class="pill">🩺 24/7 Notaufnahme</span>
-        <span class="pill">🚑 Rettungsdienst-Anbindung</span>
+      <div class="heroLeft">
+        <div class="pillRow">
+          <span class="pill">🏥 Zentrale Versorgung</span>
+          <span class="pill">🩺 24/7 Notaufnahme</span>
+          <span class="pill">🧪 Diagnostik</span>
+        </div>
+
+        <h1>Modern. Strukturiert. Menschlich.</h1>
+        <p class="lead">
+          Schnelle Abläufe, klare Kommunikation und interdisziplinäre Zusammenarbeit – von der Aufnahme bis zur Entlassung.
+        </p>
+
+        <div class="heroActions">
+          <a class="btnPrimary" href="notaufnahme.html">Sofort zur Aufnahme</a>
+          <a class="btnGhost" href="bewerbung.html">Jetzt bewerben</a>
+          <a class="btnGhost" href="fachbereiche.html">Fachbereiche</a>
+        </div>
+
+        <div class="stats">
+          <div class="stat"><b>24/7</b><span>Notaufnahme</span></div>
+          <div class="stat"><b>8+</b><span>Fachbereiche</span></div>
+          <div class="stat"><b>1</b><span>Team</span></div>
+        </div>
       </div>
 
-      <h1>Versorgung auf höchstem Niveau – mitten in Bielefeld.</h1>
-      <p class="lead">
-        Schnelle Akutversorgung, starke Fachabteilungen und klare Abläufe – von der Aufnahme bis zur Entlassung.
-      </p>
+      <div class="heroRight" aria-hidden="true">
+        <!-- Inline SVG Illustration (keine externen Bilder nötig) -->
+        <svg viewBox="0 0 520 420" class="heroSvg" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#0b5ed7"/>
+              <stop offset="1" stop-color="#0ea5e9"/>
+            </linearGradient>
+            <filter id="sh" x="-30%" y="-30%" width="160%" height="160%">
+              <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#0f172a" flood-opacity=".18"/>
+            </filter>
+          </defs>
 
-      <div class="grid3" style="margin-top:12px">
-        <div class="card">
-          <h3>Akutmedizin & Struktur</h3>
-          <p>Standardisierte Prozesse: Anmeldung → Diagnostik → Behandlung → Entlassung/Station.</p>
-        </div>
-        <div class="card">
-          <h3>Teamwork</h3>
-          <p>Pflege, Ärztlicher Dienst, Rettungsdienst und Verwaltung: kurze Wege, klare Kommunikation.</p>
-        </div>
-        <div class="card">
-          <h3>Fortbildung</h3>
-          <p>Schulungen, Mentoring, Aufstiegsmöglichkeiten – wer zuverlässig arbeitet, kommt weiter.</p>
-        </div>
-      </div>
+          <circle cx="120" cy="110" r="70" fill="url(#g1)" opacity=".18"/>
+          <circle cx="420" cy="80" r="55" fill="url(#g1)" opacity=".16"/>
+          <circle cx="410" cy="300" r="85" fill="url(#g1)" opacity=".12"/>
 
-      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px">
-        <a class="cta" href="bewerbung.html">Jetzt bewerben</a>
-        <a class="cta" style="background:rgba(255,255,255,.03); color:var(--text); border:1px solid rgba(255,255,255,.12); box-shadow:none" href="fachbereiche.html">Fachbereiche</a>
-        <a class="cta" style="background:rgba(255,255,255,.03); color:var(--text); border:1px solid rgba(255,255,255,.12); box-shadow:none" href="portal-login.html">Mitarbeiterportal</a>
+          <g filter="url(#sh)">
+            <rect x="85" y="110" rx="22" ry="22" width="350" height="230" fill="#ffffff"/>
+            <rect x="85" y="110" rx="22" ry="22" width="350" height="48" fill="#f1f5f9"/>
+
+            <rect x="120" y="178" rx="14" width="180" height="38" fill="#e2e8f0"/>
+            <rect x="120" y="232" rx="14" width="250" height="38" fill="#e2e8f0"/>
+            <rect x="120" y="286" rx="14" width="210" height="38" fill="#e2e8f0"/>
+
+            <rect x="330" y="178" rx="18" width="70" height="146" fill="url(#g1)" opacity=".18"/>
+            <path d="M355 208h20v18h18v20h-18v18h-20v-18h-18v-20h18z" fill="#0b5ed7" opacity=".9"/>
+          </g>
+
+          <g>
+            <rect x="130" y="135" rx="10" width="110" height="18" fill="#cbd5e1"/>
+            <rect x="255" y="135" rx="10" width="90" height="18" fill="#cbd5e1"/>
+          </g>
+        </svg>
       </div>
     </section>
 
-    <section style="margin-top:12px">
-      <div class="grid2">
-        <div class="alert danger">
-          <strong>Notaufnahme</strong>
-          <p>Behandlung nach Dringlichkeit (Triage). Lebensbedrohliches hat Priorität.</p>
-        </div>
-        <div class="alert">
-          <strong>In-World Zentrale</strong>
-          <p><b>+49 521 0000-100</b> · Notaufnahme: <b>+49 521 0000-110</b></p>
-        </div>
+    <section class="grid3">
+      <div class="card">
+        <div class="cardIcon">🚑</div>
+        <h3>Notaufnahme</h3>
+        <p>Triage, Diagnostik, Behandlung – klare Prioritäten und saubere Dokumentation.</p>
+      </div>
+      <div class="card">
+        <div class="cardIcon">🏥</div>
+        <h3>Fachbereiche</h3>
+        <p>Innere, Chirurgie, Pädiatrie, Neurologie, Intensiv & mehr – abgestimmt im Team.</p>
+      </div>
+      <div class="card">
+        <div class="cardIcon">🧑‍⚕️</div>
+        <h3>Karriere</h3>
+        <p>Kurzbewerbung möglich. Wunschbereich + Verfügbarkeit reichen für den Start.</p>
       </div>
     </section>
 
-    <footer>
-      <div class="footerRow container">
-        <div>
-          <b style="color:var(--text)">Klinikum Bielefeld Mitte</b><br>
-          <span>© <span id="year"></span> – Interne Webpräsenz (In-World)</span>
-        </div>
-        <div>
-          <span>Impressum · Datenschutz · Hausordnung</span><br>
-          <span style="opacity:.85">Disclaimer: Diese Seite ist für fiktive Zwecke erstellt.</span>
-        </div>
+    <section class="banner">
+      <div>
+        <b>Kontakt (In-World)</b><br>
+        Zentrale: <b>+49 521 0000-100</b> · Notaufnahme: <b>+49 521 0000-110</b>
+      </div>
+      <a class="btnPrimary" href="bewerbung.html">Bewerbung starten</a>
+    </section>
+
+    <footer class="footer">
+      <div>
+        <b>Klinikum Bielefeld Mitte</b><br>
+        © <span id="year"></span> · Betreiber (In-World): Günther · fiktive Zwecke
+      </div>
+      <div>
+        Impressum · Datenschutz · Hausordnung
       </div>
     </footer>
+
   </div>
 </main>
 
-<div class="toast" id="toast"><strong id="toastTitle"></strong><p id="toastText"></p></div>
 <script src="assets/app.js"></script>
 </body>
 </html>
+
